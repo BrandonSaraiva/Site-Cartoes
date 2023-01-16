@@ -1,0 +1,27 @@
+{
+  "name": "cartoes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "teste",
+    "start": "node index.js",
+    "build": "nexe -r views/**/*",
+    "dev": "nodemon --watch src src/index.js",
+    "debug": "nodemon --inspect index.js"
+  },
+  "author": "Brandon",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-generator": "^4.16.1",
+    "mongoose": "^6.7.2",
+    "open": "^8.4.0",
+    "pkg": "^5.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cartoes.css">
+    <style>
+        body {
+    background-color: rgba(230, 124, 124, 0.507);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+}
+
+#geral {
+    background: rgba(221, 146, 146, 0.507);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* responvididade */
+    @media screen and (max-width: 767px) {
+        padding: 0 10px;
+    }
+    
+}
+
+
+select {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    text-align: center;
+}
+
+div {
+    background: rgb(218, 110, 110);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 1px 30px  rgba(223, 94, 94, 0.13);
+    padding: 26px 24px 46px;
+    margin-left: 20%;
+
+
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 11px;
+    text-align: center;
+    color: rgb(250, 250, 250);;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.07);
+    color: #32373c;
+    display: block;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    outline: 0;
+    padding: 2px;
+    margin-bottom: 5%;
+    transition: border-color 50ms ease-in-out 0s;
+    width: 100%;
+}
+
+button {
+    background: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #555;
+    display: block;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1.5;
+    margin: 0;
+    outline: 0;
+    text-align: center;
+    text-decoration: none;
+    transition: all 50ms ease-in-out 0s;
+    width: 80%;
+    padding: 6px 0;
+    cursor: pointer;
+    margin-left: 10%;
+}
+
+button:hover {
+    background: #fff;
+    border-color: #999;
+    color: #23282d;
+}
+
+button:active {
+    transform: scale(0.98);
+            /* Scaling button to 0.98 to its original size */
+            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+            /* Lowering the shadow */
+}
+
+label {
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: center;
+}
+    </style>
+</head>
+
+<body>
+    <div id="geral">
+        <form action="/" method="POST">
+            <div>
+            <h1>Gerar o cartão</h1>
+            <ul>
+                <select name="cor" id="cartao" >
+                    <option value="azul">Azul</option>
+                    <option value="rosa">Rosa</option>
+                    <option value="Amarelo">Amarelo</option>
+                </select>
+            
+            </ul>
+            
+                <input type="text" id="codigo_gerar" placeholder="Código do cartão" name="codigo">
+            
+                <button id="btn_gerar">Gerar</button>
+                
+                <p style="color: rgb(255, 255, 255); font-size: 20px; font-weight: 600; text-align: center; margin-top: 10px;">
+                    <% if (msg1) { %>
+                        <p
+                            style="color: rgb(0, 255, 55); font-size: 20px; font-weight: 600; text-align: center; margin-top: 10px; background-color: rgba(255, 255, 255, 0.377); border-radius: 10px;">
+                        <%= msg1 %></p>
+                    <% } %>
+
+                    <% if (msg2) { %>
+                        <p
+                            style="color: rgb(252, 1, 1); font-size: 20px; font-weight: 600; text-align: center; margin-top: 10px; background-color: rgba(255, 255, 255, 0.377); border-radius: 3%;"
+                        ><%= msg2 %></p>
+                    <% } %>
+
+            </p>
+            </div>
+        </form>
+    
+
+    <form action="/" method="POST">
+        <div class="container">
+            <h1>Conferir o Cartão</h1>
+            <ul>
+                <input type="text" id="codigo_conferir" placeholder="Código do cartão" name="cd_conferir">
+                <button id="btn_conferir">Conferir</button>
+            </ul>
+        
+                
+                <% if (msg3) { %></p>
+                    <p
+                        style="color: rgb(255, 0, 0); font-size: 20px; font-weight: 600; text-align: center; margin-top: 10px; background-color: rgba(255, 255, 255, 0.377);border-radius: 3%;"
+                    ><%= msg3 %></p>
+                <% } %>
+
+                <% if (msg4) { %>
+                    <p
+                        style="color: rgb(9, 255, 9); font-size: 20px; font-weight: 600; text-align: center; margin-top: 10px; background-color: rgba(255, 255, 255, 0.377);border-radius: 3%;"
+                    ><%= msg4 %></p>
+                <% } %>
+        
+        </div>
+    </form>
+
+    <form action="/" method="POST">
+        <div class="container">
+            <h1>
+                Utilizar o cartão
+            </h1>
+            <ul>
+                <input type="text" id="codigo_utilizar" placeholder="Código do cartão" name="cd_utilização">
+                <button id="btn_utilizar">Utilizar</button>
+            </ul>
+        
+                <% if (msg6) { %>
+                    <p
+                        style="color: rgb(255, 0, 0); font-size: 20px; font-weight: 600; text-align: center; margin-top: 10px;background-color: rgba(255, 255, 255, 0.377);border-radius: 3%;" 
+                    ><%= msg6 %></p>
+                <% } %>
+
+                <% if (msg5) { %>
+                    <p
+                        style="color: rgb(1, 255, 56); font-size: 20px; font-weight: 600; text-align: center; margin-top: 10px; background-color: rgba(255, 255, 255, 0.377);border-radius: 3%;""
+                    ><%= msg5 %></p>
+                <% } %>
+        
+        </div>
+    </form>
+</body>
+
+</html>
+
