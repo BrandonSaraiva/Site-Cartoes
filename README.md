@@ -4,6 +4,7 @@ Criei esse site para um familiar utilizar em sua loja (não é de domínio públ
 
 # Pacotes e dica:
 
+**Pacotes para se instalar:**
 ![image](https://user-images.githubusercontent.com/90096835/212728953-40a34559-59f0-440d-87b3-776fab8e51be.png)
 
 Para poder ligar o servidor de uma forma mais facilitada para o usuário gere um executavel como esse:
