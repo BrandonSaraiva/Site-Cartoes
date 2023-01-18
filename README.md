@@ -1,6 +1,6 @@
 # Sobre
 
-Criei esse site para um familiar utilizar em sua loja (não é de domínio públio, somente os funcionarios utilizariam). Ele é conectado a uma base de dados criada com mongoDb, é bem simples  mesmo porque o foco é só registrar os cartões para ter controle.
+Criei esse site para um familiar utilizar em sua loja (não é de domínio público, somente os funcionarios utilizariam). Ele é conectado a uma base de dados criada com mongoDb. È bem simples  mesmo porque o foco é só registrar os cartões para ter controle.
 
 # Pacotes e dica:
 
@@ -37,6 +37,6 @@ Consultando o cartão que já foi utilizado:
 ![image](https://user-images.githubusercontent.com/90096835/212728297-cc832e66-5c0a-49eb-a6ab-0f4e9540b070.png)
 
 
-**Print do banco de dados**
+**Print do banco de dados:**
 
 ![image](https://user-images.githubusercontent.com/90096835/212728579-5a02ba23-71e8-4228-a89a-82d032290019.png)
